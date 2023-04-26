@@ -6,8 +6,9 @@
     <title>Alura-books</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -43,12 +44,49 @@
             <a href="#"><img src="img/usuario.svg" alt="Meu perfil" class="container__imagem"></a>
         </div>
     </header>
-    <section class="banner">
-        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
-        <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
-        <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
-    </section>
-    <main></main>
+    <main>
+        <section class="banner">
+            <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+            <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+            <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+        </section>
+        <section class="carrossel">
+            <h2 class="carrossel__titulo">Útimos Lançamentos</h2>
+            
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/acessibilidade.svg" alt="Guia de acessibilidade da Alura-Books">></div>
+                <div class="swiper-slide"><img src="img/angular.svg" alt="Guia de angular da Alura-Books">></div>
+                <div class="swiper-slide"><img src="img/apachekafka.svg" alt="Guia de Apache Kafka da Alura-Books">></div>
+                <div class="swiper-slide"><img src="img/guia-front-end.svg" alt="Guia de front-end da Alura-Books">></div>
+                <div class="swiper-slide"><img src="img/javascript.svg" alt="Guia de JavaScript da Alura-Books">></div>
+                <div class="swiper-slide"><img src="img/liderança.svg" alt="Guia de liderança da Alura-Books">></div>
+                ...
+                </div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+            </div>
+        </section>
+    </main>
     <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets', },
+        });
+    </script>
 </body>
 </html>
