@@ -41,3 +41,29 @@ hr {
     padding: 1em;
     color: var(--cor-titulo2);
 }
+
+@media screen and (min-width:1024px) {
+    /* .contato, .contato__texto, .contato__email, .contato__titulo {
+        padding: 0 0 0 0;
+        margin: 0%;
+       } */
+    
+    .contato__titulo {
+        font-size: 24px;
+    }
+
+    .contato__tablet {
+        width: 30%;
+    }
+
+    .contato {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .contato__email {
+        width: 40%;
+    }
+}
