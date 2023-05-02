@@ -1,0 +1,17 @@
+hr {
+    margin: 0;
+}
+
+.rodape {
+    background-color: var(--branco);
+    padding: 1em;
+}
+
+.rodape__titulo {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 18px;
+    font-weight: 500;
+}
